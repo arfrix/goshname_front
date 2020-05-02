@@ -10,7 +10,7 @@ function Chair(isFreeInit , isReservedInit){
         <div className >
             {isFree ?
             <img src="assets/img/free_chair.png" className=""></img> :
-            ifReserved ? <img src="assets/img/used_chair.png" className=""></img> :
+            iSReserved ? <img src="assets/img/used_chair.png" className=""></img> :
             <img src="assets/img/reserved_chair.png" className=""></img> }
         </div>
     );
