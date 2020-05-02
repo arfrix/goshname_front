@@ -3,9 +3,9 @@ import './chair.css'
 
 
 
-function Chair(){
-    const [isFree , setIsFree] = useState(true)
-    const [ifReserved , setIfReserved] = useState(false)
+function Chair(isFreeInit , isReservedInit){
+    const [isFree , setIsFree] = useState(isFreeInit)
+    const [iSReserved , setIfReserved] = useState(isReservedInit)
     return(
         <div className >
             {isFree ?
