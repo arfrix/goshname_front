@@ -23,13 +23,13 @@ function Table (props){
                 
             </Row>
             <Row className="justify-content-center">
-                <Col lg={1}>
+                <Col lg={1} className="p-0">
                     <PickUpChairs chairsCount={props.verticalSize}  tableId="a" chairLineSituation="right"></PickUpChairs>
                 </Col>
-                <Col lg={2} className="table-surface">
+                <Col lg={2} className="table-surface p-0">
                     <div className=""></div>
                 </Col>
-                <Col lg={1}>
+                <Col lg={1} className="p-0">
                     <PickUpChairs chairsCount={props.verticalSize}   tableId="a" chairLineSituation="left"></PickUpChairs>
                 </Col>
             </Row>
