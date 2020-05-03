@@ -20,7 +20,9 @@ function Table (props){
                 <PickUpChairs chairsCount="5"  tableId="a"></PickUpChairs>
             </Row>
             <Row>
-                <Col></Col>
+                <Col>
+                    <PickUpChairs chairsCount="5"  tableId="a"></PickUpChairs>
+                </Col>
                 <Col lg={5}>table</Col>
                 <Col></Col>
             </Row>
@@ -48,7 +50,7 @@ function PickUpChairs(props){
     return(
         ChairList.map((val , index)=> 
             // ! why do we need key ?
-            <Chair key={index} {...val}></Chair>    
+                <Chair key={index} {...val}></Chair>    
         )
     )
 

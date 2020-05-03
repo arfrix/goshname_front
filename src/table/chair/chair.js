@@ -11,7 +11,7 @@ function Chair(props){
     // const [isFree , setIsFree] = useState(props.isFreeInit)
     // const [iSReserved , setIfReserved] = useState(props.isReservedInit)
     return(
-        <div  className="chair-img-box">
+        <div  className="fit-content-width">
             {/* {isFree ?
             <img src="assets/img/free_chair.png" className=""></img> :
             iSReserved ? <img src="assets/img/used_chair.png" className=""></img> :

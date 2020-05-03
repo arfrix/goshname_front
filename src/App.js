@@ -2,6 +2,7 @@ import React from 'react';
 import Chair from './table/chair/chair'
 import Table from './table/table'
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
