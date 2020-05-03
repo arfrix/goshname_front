@@ -1,5 +1,6 @@
 import React from 'react'
 import Chair from './chair/chair'
+import Container from 'react-bootstrap/Container'
 
 
 function Table (props){
@@ -24,10 +25,12 @@ function Table (props){
 
     return(
 
-        <div>
+        <Container></Container>
 
-            <PickUpChairs verticalSize="5" ></PickUpChairs>
-        </div>
+        // <div>
+
+        //     <PickUpChairs verticalSize="5" ></PickUpChairs>
+        // </div>
 
     )
 }
