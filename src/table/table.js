@@ -3,6 +3,7 @@ import Chair from './chair/chair'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import './table.css'
 
 
 function Table (props){
@@ -25,7 +26,9 @@ function Table (props){
                 <Col lg={1}>
                     <PickUpChairs chairsCount="5"  tableId="a"></PickUpChairs>
                 </Col>
-                <Col lg={4}>table</Col>
+                <Col lg={2} className="table-surface">
+                    <div className=""></div>
+                </Col>
                 <Col lg={1}>
                     <PickUpChairs chairsCount="5"  tableId="a"></PickUpChairs>
                 </Col>
