@@ -26,7 +26,7 @@ function Table (props){
 
         <div>
 
-            <PickUpChairs verticalSize="5"></PickUpChairs>
+            <PickUpChairs verticalSize="5" ></PickUpChairs>
         </div>
 
     )
