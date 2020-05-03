@@ -32,8 +32,7 @@ function Chair(props){
     }, [props.idReserved, props.isFree, props.situation])
 
     return(
-        <div  className="fit-content-width m-auto">
-            
+        <div  className="fit-content-width mx-auto my-2">        
             <img src={imgPath} className={direction}></img>
         </div>
     );

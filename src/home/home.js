@@ -14,7 +14,7 @@ function Home (){
                 <Col lg={10}>space</Col>
                 <Col lg={1}>logo</Col>
             </Row>
-            <Row>
+            <Row >
                 <Col lg={2}>
                     <div className="home-tab-box">ناهار خوری</div>
                     <div className="home-tab-box">اتاق جلسات</div>

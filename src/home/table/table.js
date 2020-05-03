@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import Chair from './chair/chair'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -9,28 +9,35 @@ import './table.css'
 function Table (props){
 
 
-
+    const [tableHeight , setTableHeight] = useState()
+    const tRef  = useRef()
 
   
-    // const verticalSideChairs =
+    useEffect(() => {
+        const refCurrent = tRef.current
+
+       
+        setTableHeight(refCurrent.clientHeight)
+        
+    }, [])
 
     return(
 
-        <Container>
+        <Container className="my-5">
             <Row className="justify-content-center">
                 
                     <PickUpChairs chairsCount={props.horizontalSize}  tableId="a" chairLineSituation="top"></PickUpChairs>
                 
             </Row>
-            <Row className="justify-content-center">
-                <Col lg={1} className="p-0">
+            <Row className="justify-content-center align-items-center">
+                <Col lg={0} className="p-0" ref={tRef}>
                     <PickUpChairs chairsCount={props.verticalSize}  tableId="a" chairLineSituation="right"></PickUpChairs>
                 </Col>
-                <Col lg={2} className="table-surface p-0">
-                    <div className=""></div>
+                <Col lg={4} className="table-surface p-0 m-2" style={{height : tableHeight + 'px'}}>
+                    {/* <img src="assets/img/table.png"></img> */}
                 </Col>
-                <Col lg={1} className="p-0">
-                    <PickUpChairs chairsCount={props.verticalSize}   tableId="a" chairLineSituation="left"></PickUpChairs>
+                <Col lg={0} className="p-0">
+                    <PickUpChairs chairsCount={props.verticalSize}  tableId="a" chairLineSituation="left"></PickUpChairs>
                 </Col>
             </Row>
             <Row className="justify-content-center">

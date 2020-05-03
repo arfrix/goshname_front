@@ -1,4 +1,5 @@
 .table-surface{
+    min-height: 70px;
     border: 2px solid rgb(61, 61, 61);
     /* background-color: rgb(83, 82, 82); */
 }
