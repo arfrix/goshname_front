@@ -19,22 +19,22 @@ function Table (props){
         <Container>
             <Row className="justify-content-center">
                 
-                    <PickUpChairs chairsCount="2"  tableId="a" chairLineSituation="top"></PickUpChairs>
+                    <PickUpChairs chairsCount={props.horizontalSize}  tableId="a" chairLineSituation="top"></PickUpChairs>
                 
             </Row>
             <Row className="justify-content-center">
                 <Col lg={1}>
-                    <PickUpChairs chairsCount="5"  tableId="a" chairLineSituation="right"></PickUpChairs>
+                    <PickUpChairs chairsCount={props.verticalSize}  tableId="a" chairLineSituation="right"></PickUpChairs>
                 </Col>
                 <Col lg={2} className="table-surface">
                     <div className=""></div>
                 </Col>
                 <Col lg={1}>
-                    <PickUpChairs chairsCount="5"  tableId="a" chairLineSituation="left"></PickUpChairs>
+                    <PickUpChairs chairsCount={props.verticalSize}   tableId="a" chairLineSituation="left"></PickUpChairs>
                 </Col>
             </Row>
             <Row className="justify-content-center">
-                <PickUpChairs chairsCount="2"  tableId="a" chairLineSituation="bottom"></PickUpChairs>
+                <PickUpChairs chairsCount={props.horizontalSize}  tableId="a" chairLineSituation="bottom"></PickUpChairs>
             </Row>
         </Container>
 
