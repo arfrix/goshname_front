@@ -16,17 +16,23 @@ function Table (props){
     return(
 
         <Container>
-            <Row>
-                <PickUpChairs chairsCount="5"  tableId="a"></PickUpChairs>
+            <Row className="justify-content-center">
+                
+                    <PickUpChairs chairsCount="2"  tableId="a"></PickUpChairs>
+                
             </Row>
-            <Row>
-                <Col>
+            <Row className="justify-content-center">
+                <Col lg={1}>
                     <PickUpChairs chairsCount="5"  tableId="a"></PickUpChairs>
                 </Col>
-                <Col lg={5}>table</Col>
-                <Col></Col>
+                <Col lg={4}>table</Col>
+                <Col lg={1}>
+                    <PickUpChairs chairsCount="5"  tableId="a"></PickUpChairs>
+                </Col>
             </Row>
-            <Row></Row>
+            <Row className="justify-content-center">
+                <PickUpChairs chairsCount="2"  tableId="a"></PickUpChairs>
+            </Row>
         </Container>
 
         

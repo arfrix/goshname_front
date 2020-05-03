@@ -17,7 +17,7 @@ function Chair(props){
             iSReserved ? <img src="assets/img/used_chair.png" className=""></img> :
             <img src="assets/img/reserved_chair.png" className=""></img> } */}
             
-            <img src="assets/img/free_chair.png" className=""></img> {props.index}
+            <img src="assets/img/free_chair.png" className=""></img>
         </div>
     );
 }
