@@ -16,7 +16,9 @@ function Table (props){
     return(
 
         <Container>
-            <Row></Row>
+            <Row>
+                <PickUpChairs chairsCount="5"  tableId="a"></PickUpChairs>
+            </Row>
             <Row>
                 <Col></Col>
                 <Col lg={5}>table</Col>
@@ -25,10 +27,10 @@ function Table (props){
             <Row></Row>
         </Container>
 
-        // <div>
+        
 
-        //     <PickUpChairs verticalSize="5" ></PickUpChairs>
-        // </div>
+            
+        
 
     )
 }
@@ -37,7 +39,7 @@ function Table (props){
 
 function PickUpChairs(props){
      // ! is there any to declear props types ?
-    const ChairList =[ ...new Array(parseInt(props.verticalSize))].map((val,index) => ({
+    const ChairList =[ ...new Array(parseInt(props.chairsCount))].map((val,index) => ({
         'tableId' : props.tableId ,
         'orientation' : 'vertical' ,
         'index' : index
