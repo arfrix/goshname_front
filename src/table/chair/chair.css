@@ -1,3 +1,16 @@
 .chair-img-box{
     width: fit-content;
 }
+
+.to-left-orientation{
+    transform: rotate(-90deg);
+}
+.to-right-orientation{
+    transform: rotate(90deg);
+}
+.to-bottom-orientation{
+    transform: rotate(0deg);
+}
+.to-top-orientation{
+    transform: rotate(180deg);
+}
