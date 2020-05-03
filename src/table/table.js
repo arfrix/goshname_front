@@ -54,7 +54,9 @@ function PickUpChairs(props){
         'tableId' : props.tableId ,
         'orientation' : 'vertical' ,
         'index' : index ,
-        'chairLineSituation' : props.chairLineSituation
+        'chairLineSituation' : props.chairLineSituation,
+        'isFree' : true ,
+        'idReserved' : false
     }))
     console.log("pi")
     return(
