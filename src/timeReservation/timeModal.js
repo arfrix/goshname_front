@@ -140,8 +140,10 @@ function TimeModal(props) {
                     <Col lg={2}>
                         {TabsPicker(tabsInfo)}
                     </Col>
-                    <Col lg={6}>
-                        {TimeCellsPicker()}
+                    <Col lg={7}>
+                        <Row>
+                            {TimeCellsPicker()}
+                        </Row>
                     </Col>
                 </Row>
             </Container>

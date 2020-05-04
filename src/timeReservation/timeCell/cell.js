@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from 'react-bootstrap/Button'
 
 
 
@@ -8,9 +9,10 @@ function Cell(props){
 
 
     return(
-        <div className="">
-            <h5>{props.startTime}</h5>
-        </div>
+      <>
+        <Button variant="outline-secondary" className="m-2">{props.startTime}</Button>
+        {`   `}
+      </>
 
     )
 }
