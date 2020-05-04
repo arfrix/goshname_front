@@ -15,13 +15,13 @@ import Tab from './tab/tab'
 function TimeModal(props) {
 
 
-    const dayPartSelection_init = [
+    const tabsInfo_init = [
         {isSelected: true , name: 'صبح' },
         {isSelected: false , name: 'ظهر'},
         {isSelected: false , name: 'عصر'}
     ]
 
-    const [dayPartSelection , setDayPartSelection] = useState(dayPartSelection_init)
+    const [tabsInfo , setTabsInfo] = useState(tabsInfo_init)
 
     function TabsPicker(list){
       return(
@@ -33,7 +33,7 @@ function TimeModal(props) {
     function alwayesOneTabSelected(witchOneClicked){
         switch (witchOneClicked) {
             case 0:
-                setDayPartSelection(
+                setTabsInfo(
                     [
                         {isSelected: true , name: 'صبح' },
                         {isSelected: false , name: 'ظهر'},
@@ -42,7 +42,7 @@ function TimeModal(props) {
                 )
                 break;
             case 1:
-                setDayPartSelection(
+                setTabsInfo(
                     [
                         {isSelected: false , name: 'صبح' },
                         {isSelected: true , name: 'ظهر'},
@@ -51,7 +51,7 @@ function TimeModal(props) {
                 )
                 break;
             case 2:
-                setDayPartSelection(
+                setTabsInfo(
                     [
                         {isSelected: false , name: 'صبح' },
                         {isSelected: false , name: 'ظهر'},
@@ -65,6 +65,16 @@ function TimeModal(props) {
         }
   
     }
+
+
+
+
+
+
+    function TimeCellsPicker(){
+        
+    }
+
 
 
     return (
@@ -84,9 +94,11 @@ function TimeModal(props) {
             <Container>
                 <Row>
                     <Col lg={2}>
-                        {TabsPicker(dayPartSelection)}
+                        {TabsPicker(tabsInfo)}
                     </Col>
-                    <Col lg={6}>5</Col>
+                    <Col lg={6}>
+                        {TimeCellsPicker()}
+                    </Col>
                 </Row>
             </Container>
         </Modal.Body>
