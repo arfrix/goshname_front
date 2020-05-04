@@ -67,12 +67,51 @@ function TimeModal(props) {
     }
 
 
+    const timeCellInfo_init = [
+        {startTime:'8:00' ,  onWitchPartOfDay:'morning' ,situation:''},
+        {startTime:'8:20' ,  onWitchPartOfDay:'morning' ,situation:''},
+        {startTime:'8:40' ,  onWitchPartOfDay:'morning' ,situation:''},
+        {startTime:'9:00' ,  onWitchPartOfDay:'morning' ,situation:''},
+        {startTime:'9:20' ,  onWitchPartOfDay:'morning' ,situation:''},
+        {startTime:'9:40' ,  onWitchPartOfDay:'morning' ,situation:''},
+        {startTime:'10:00' , onWitchPartOfDay:'morning' ,situation:''},
+        {startTime:'10:20' , onWitchPartOfDay:'morning' ,situation:''},
+        {startTime:'10:40' , onWitchPartOfDay:'morning' ,situation:''},
+        {startTime:'11:00' , onWitchPartOfDay:'morning' ,situation:''},
+        {startTime:'11:20' , onWitchPartOfDay:'morning' ,situation:''},
+        {startTime:'11:40' , onWitchPartOfDay:'morning' ,situation:''},
+        {startTime:'12:00' , onWitchPartOfDay:'morning' ,situation:''},
+        {startTime:'12:20' , onWitchPartOfDay:'morning' ,situation:''},
+        {startTime:'12:40' , onWitchPartOfDay:'morning' ,situation:''},
+        {startTime:'13:00' , onWitchPartOfDay:'noon' ,situation:''},
+        {startTime:'13:20' , onWitchPartOfDay:'noon' ,situation:''},
+        {startTime:'13:40' , onWitchPartOfDay:'noon' ,situation:''},
+        {startTime:'14:00' , onWitchPartOfDay:'noon' ,situation:''},
+        {startTime:'14:20' , onWitchPartOfDay:'noon' ,situation:''},
+        {startTime:'14:40' , onWitchPartOfDay:'noon' ,situation:''},
+        {startTime:'15:00' , onWitchPartOfDay:'noon' ,situation:''},
+        {startTime:'15:20' , onWitchPartOfDay:'noon' ,situation:''},
+        {startTime:'15:40' , onWitchPartOfDay:'noon' ,situation:''},
+        {startTime:'16:00' , onWitchPartOfDay:'noon' ,situation:''},
+        {startTime:'16:20' , onWitchPartOfDay:'noon' ,situation:''},
+        {startTime:'16:40' , onWitchPartOfDay:'noon' ,situation:''},
+        {startTime:'17:00' , onWitchPartOfDay:'noon' ,situation:''},
+        {startTime:'17:20' , onWitchPartOfDay:'noon' ,situation:''},
+        {startTime:'17:40' , onWitchPartOfDay:'noon' ,situation:''},
+        {startTime:'18:00' , onWitchPartOfDay:'afternoon' ,situation:''},
+        {startTime:'18:20' , onWitchPartOfDay:'afternoon' ,situation:''},
+        {startTime:'18:40' , onWitchPartOfDay:'afternoon' ,situation:''},
+    ]
 
-
-
+    const [timeCellInfo , setTimeCellInfo] = useState(timeCellInfo_init)
 
     function TimeCellsPicker(){
-        
+        return(
+            timeCellInfo.map((val)=>
+                <Cell {...val}></Cell>
+            )
+        )
+
     }
 
 
