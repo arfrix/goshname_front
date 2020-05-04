@@ -3,6 +3,8 @@
   
   
 function Tab(props){
+    console.log('tab')
+    console.log(props)
 
     const [tabCssClass , setTabCssClass] = useState()
 
@@ -11,7 +13,7 @@ function Tab(props){
     }, [props.isSelected])
 
     return(
-    <div className={tabCssClass} onClick={()=> console.log('ff')}>{props.name}</div>
+    <div className={tabCssClass} onClick={props.tabSelector}>{props.name}</div>
         
     )
 }

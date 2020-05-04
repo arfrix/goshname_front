@@ -16,7 +16,7 @@ function TimeModal(props) {
 
 
     const dayPartSelection_init = [
-        {isSelected: true , name: 'صبح'},
+        {isSelected: true , name: 'صبح' },
         {isSelected: false , name: 'ظهر'},
         {isSelected: false , name: 'عصر'}
     ]
@@ -58,10 +58,26 @@ function TimeModal(props) {
   function TabsPicker(list){
     return(
         list.map((val , index) =>
-            // ! set onclick here , not work , why ???????
-            <Tab key={index} {...val} ></Tab>
+        <Tab key={index} {...val} tabSelector={()=> alwayesOneTabSelected(index)} ></Tab>
         )    
     )
+  }
+  function alwayesOneTabSelected(witchOneClicked){
+      switch (witchOneClicked) {
+          case 0:
+              console.log("صبح")
+              break;
+          case 1:
+              console.log("ظهر")
+              break;
+          case 2:
+              console.log("عصر")
+              break;
+      
+          default:
+              break;
+      }
+
   }
 
 
