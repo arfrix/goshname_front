@@ -6,6 +6,7 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Tab from './tab/tab'
+import Cell from './timeCell/cell'
 
 
 
@@ -14,7 +15,7 @@ import Tab from './tab/tab'
 
 function TimeModal(props) {
 
-
+    const [witchTabCurrentySelected , setWitchTabCurrentySelected] = useState('morning')
     const tabsInfo_init = [
         {isSelected: true , name: 'صبح' },
         {isSelected: false , name: 'ظهر'},
@@ -40,15 +41,17 @@ function TimeModal(props) {
                         {isSelected: false , name: 'عصر'}
                     ]
                 )
+                setWitchTabCurrentySelected('morning')
                 break;
-            case 1:
-                setTabsInfo(
-                    [
-                        {isSelected: false , name: 'صبح' },
-                        {isSelected: true , name: 'ظهر'},
-                        {isSelected: false , name: 'عصر'}
-                    ]
-                )
+                case 1:
+                    setTabsInfo(
+                        [
+                            {isSelected: false , name: 'صبح' },
+                            {isSelected: true , name: 'ظهر'},
+                            {isSelected: false , name: 'عصر'}
+                        ]
+                    )
+                    setWitchTabCurrentySelected('noon')
                 break;
             case 2:
                 setTabsInfo(
@@ -58,6 +61,7 @@ function TimeModal(props) {
                         {isSelected: true , name: 'عصر'}
                     ]
                 )
+                setWitchTabCurrentySelected('afternoon')
                 break;
         
             default:
@@ -108,7 +112,8 @@ function TimeModal(props) {
     function TimeCellsPicker(){
         return(
             timeCellInfo.map((val)=>
-                <Cell {...val}></Cell>
+                {if(val.onWitchPartOfDay === witchTabCurrentySelected)
+                   return <Cell {...val}></Cell>}
             )
         )
 
