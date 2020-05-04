@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import TimeModal from '../../../timeReservation/timeModal'
 import './chair.css'
 
 
@@ -31,10 +32,20 @@ function Chair(props){
         setImgPath(chairSituationToImgPath(props.isFree , props.idReserved))
     }, [props.idReserved, props.isFree, props.situation])
 
+
+    const [showModal, setShowModal] = useState(false);
+
     return(
-        <div  className="fit-content-width mx-auto my-2">        
-            <img src={imgPath} className={direction}></img>
-        </div>
+        <>
+            <div  className="fit-content-width mx-auto my-2"  onClick={() => setShowModal(true)}>        
+                <img src={imgPath} className={direction}></img>
+            </div>
+        
+            <TimeModal 
+                show={showModal}
+                onHide={()=> setShowModal(false)}
+            />
+        </>
     );
 }
 
