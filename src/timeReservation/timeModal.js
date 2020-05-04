@@ -137,7 +137,7 @@ function TimeModal(props) {
         <Modal.Body>
             <Container>
                 <Row>
-                    <Col lg={2}>
+                    <Col lg={2} className="border-left ml-3">
                         {TabsPicker(tabsInfo)}
                     </Col>
                     <Col lg={7}>
