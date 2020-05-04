@@ -5,3 +5,7 @@
 .fit-content-width{
   width: fit-content;
 }
+
+.rtl{
+  direction: rtl;
+}

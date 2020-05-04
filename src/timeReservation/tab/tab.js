@@ -1,5 +1,6 @@
 
  import React, { useState, useEffect } from 'react' 
+ import './tab.css'
   
   
 function Tab(props){
@@ -13,7 +14,9 @@ function Tab(props){
     }, [props.isSelected])
 
     return(
-    <div className={tabCssClass} onClick={props.tabSelector}>{props.name}</div>
+    <div className={tabCssClass} onClick={props.tabSelector}>
+        <h5 className="my-auto">{props.name}</h5>    
+    </div>
         
     )
 }
@@ -24,9 +27,9 @@ function convertPropsToCssClassName(isSelected){
     // tip use switch to be able add more condition ib future
     switch (isSelected) {
         case true:
-            return 'selected-tab'
+            return 'selected-tab p-2 pb-3'
     
-        default: return 'unselected-tab'
+        default: return 'unselected-tab p-2 pb-3'
     }
 }
 

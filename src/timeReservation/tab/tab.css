@@ -1,0 +1,11 @@
+.selected-tab{
+    text-align: center;
+    border-radius: 0px 5px 5px 0px;
+    border: 2px solid rgba(0, 0, 0, 0.205);
+    border-left: none;
+}
+
+.unselected-tab{
+    text-align: center;
+    border-left: 2px solid rgba(0, 0, 0, 0.205);
+}
