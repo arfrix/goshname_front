@@ -25,7 +25,7 @@ function FinalAcceptModal(props){
           <Modal.Body>
               <Container>
                   <Row>
-                      <Col lg={2} className="border-left ml-3">
+                      <Col className="">
                           {props.timeCell}
                       </Col>
                   </Row>

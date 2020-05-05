@@ -42,7 +42,7 @@ function Cell(props){
         <FinalAcceptModal
             show={showModal}
             onHide={()=> setShowModal(false)}
-            timeCell={props.timeCell}
+            timeCell={props.startTime}
         />
       </>
 

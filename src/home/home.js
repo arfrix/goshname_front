@@ -22,13 +22,13 @@ function Home (){
                 </Col>
                 <Col>
                     <Table verticalSize='1'  horizontalSize="1" tableId="a"></Table>
-                    {/* <Table verticalSize='1'  horizontalSize="1" tableId="a"></Table>
-                    <Table verticalSize='3'  horizontalSize="1" tableId="a"></Table> */}
+                    <Table verticalSize='1'  horizontalSize="1" tableId="a"></Table>
+                    <Table verticalSize='3'  horizontalSize="1" tableId="a"></Table>
                 </Col>
                 <Col>
-                    {/* <Table verticalSize='3'  horizontalSize="1" tableId="a"></Table>
+                    <Table verticalSize='3'  horizontalSize="1" tableId="a"></Table>
                     <Table verticalSize='1'  horizontalSize="1" tableId="a"></Table>
-                    <Table verticalSize='1'  horizontalSize="1" tableId="a"></Table> */}
+                    <Table verticalSize='1'  horizontalSize="1" tableId="a"></Table>
                 </Col>
                
             </Row>
