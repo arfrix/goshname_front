@@ -1,9 +1,9 @@
 .selected-tab{
     text-align: center;
    
-    border-bottom: 2px solid rgba(0, 0, 0, 0.205);
+    border-bottom: 2px solid rgba(255, 72, 0, 0.223);
     
-    color: green;
+    color: rgb(255, 72, 0);
 }
 .selected-tab h5{
     font-size: 22px;
@@ -15,5 +15,9 @@
 }
 
 .border-left{
-    border-left: 2px solid rgba(0, 0, 0, 0.205);
+    border-left: 2px solid rgba(255, 72, 0, 0.623);
+}
+
+.test{
+    z-index: 1100;
 }
