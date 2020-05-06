@@ -1,16 +1,19 @@
 import React, { useEffect } from 'react'
-import firebase from 'firebase/app'
-import 'firebase/auth'
+import { useHistory } from "react-router-dom";
+import firebase from '../fireBase/firebase'
 // ! how move all firebase stuff to ../fireBase/firebase.js !!!!!!!!!!!!!!!!!!!!!!!!
 
 function Splash(){
+    let history = useHistory()
 
     useEffect(()=>{
-        firebase.auth().onAuthStateChanged(function(user) {
+        firebase.auth.onAuthStateChanged(function(user) {
             if (user) {
-              // User is signed in.
+              console.log("signed in")
+              history.push('/home')
             } else {
-              // No user is signed in.
+                console.log('not signed in')
+                history.push('/login')
             }
           });
     })

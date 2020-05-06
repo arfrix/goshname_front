@@ -1,10 +1,22 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Table from './table/table'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import firebase from '../fireBase/firebase'
+
+import app from 'firebase/app'
+import 'firebase/auth'
 
 function Home (){
+
+
+    useEffect(()=>{
+        console.log(firebase.auth.currentUser)
+    }, [])
+
+
+
     return(
         
 

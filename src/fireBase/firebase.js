@@ -20,8 +20,19 @@ class firebase{
     constructor(){
         app.initializeApp(firebaseConfig)
         // app.analytics()
-        // this.auth = app.auth()
+        this.auth = app.auth()
         this.db = app.firestore()
+        this.userInfo = app.auth().currentUser
+    }
+    
+
+    login(){
+        var provider = new app.auth.GoogleAuthProvider();
+        app.auth().signInWithRedirect(provider);
+    }
+
+    logOut(){
+
     }
 
     addReservation(){
@@ -32,6 +43,8 @@ class firebase{
 
 
 }
+
+
 
 
 export default new firebase()
