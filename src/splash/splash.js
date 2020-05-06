@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
-import firebase from '../fireBase/firebase'
-
+import firebase from 'firebase/app'
+import 'firebase/auth'
+// ! how move all firebase stuff to ../fireBase/firebase.js !!!!!!!!!!!!!!!!!!!!!!!!
 
 function Splash(){
 
