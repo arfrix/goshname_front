@@ -5,7 +5,7 @@ import './chair.css'
 
 
 function Chair(props){
-    // console.log('chairs')
+    console.log(props)
     
     
 

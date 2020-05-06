@@ -26,22 +26,23 @@ function Table (props){
         <Container className="my-5">
             <Row className="justify-content-center">
                 
-                    <PickUpChairs chairsCount={props.horizontalSize}  tableId="a" chairLineSituation="top"></PickUpChairs>
+                    <PickUpChairs chairsCount={props.horizontalSize}  tableId={props.tableId} chairLineSituation="top"></PickUpChairs>
                 
             </Row>
             <Row className="justify-content-center align-items-center">
                 <Col lg={0} className="p-0" ref={tRef}>
-                    <PickUpChairs chairsCount={props.verticalSize}  tableId="a" chairLineSituation="right"></PickUpChairs>
+                    <PickUpChairs chairsCount={props.verticalSize}  tableId={props.tableId} chairLineSituation="right"></PickUpChairs>
                 </Col>
                 <Col lg={4} className="table-surface p-0 m-2" style={{height : tableHeight + 'px'}}>
                     {/* <img src="assets/img/table.png"></img> */}
+                    {props.tableId}
                 </Col>
                 <Col lg={0} className="p-0">
-                    <PickUpChairs chairsCount={props.verticalSize}  tableId="a" chairLineSituation="left"></PickUpChairs>
+                    <PickUpChairs chairsCount={props.verticalSize}  tableId={props.tableId} chairLineSituation="left"></PickUpChairs>
                 </Col>
             </Row>
             <Row className="justify-content-center">
-                <PickUpChairs chairsCount={props.horizontalSize}  tableId="a" chairLineSituation="bottom"></PickUpChairs>
+                <PickUpChairs chairsCount={props.horizontalSize}  tableId={props.tableId} chairLineSituation="bottom"></PickUpChairs>
             </Row>
         </Container>
 
@@ -59,7 +60,6 @@ function PickUpChairs(props){
      // ! is there any to declear props types ?
     const ChairList =[ ...new Array(parseInt(props.chairsCount))].map((val,index) => ({
         'tableId' : props.tableId ,
-        'orientation' : 'vertical' ,
         'index' : index ,
         'chairLineSituation' : props.chairLineSituation,
         'isFree' : true ,
