@@ -4,10 +4,21 @@ import Button from 'react-bootstrap/Button'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-
+import firebase from '../fireBase/firebase'
 
 
 function FinalAcceptModal(props){
+    
+
+
+    async function submit(){
+        try {
+            await firebase.addReservation()
+        } catch (error) {
+            alert('reed')
+            console.log(error)
+        }
+    }
 
 
     return (
@@ -33,7 +44,7 @@ function FinalAcceptModal(props){
           </Modal.Body>
           <Modal.Footer>
             <Button variant="danger" onClick={props.onHide}>اوه اوه نه</Button>
-            <Button variant="success" onClick={props.onHide}>تایید</Button>
+            <Button variant="success" onClick={submit}>تایید</Button>
           </Modal.Footer>
         </Modal>
     );
