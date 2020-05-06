@@ -32,13 +32,13 @@ function Home (){
                 </Col>
                 <Col>
                     <Table verticalSize='1'  horizontalSize="1" tableId="a"></Table>
-                    <Table verticalSize='1'  horizontalSize="1" tableId="a"></Table>
-                    <Table verticalSize='3'  horizontalSize="1" tableId="a"></Table>
+                    <Table verticalSize='1'  horizontalSize="1" tableId="b"></Table>
+                    <Table verticalSize='3'  horizontalSize="1" tableId="c"></Table>
                 </Col>
                 <Col>
-                    <Table verticalSize='3'  horizontalSize="1" tableId="a"></Table>
-                    <Table verticalSize='1'  horizontalSize="1" tableId="a"></Table>
-                    <Table verticalSize='1'  horizontalSize="1" tableId="a"></Table>
+                    <Table verticalSize='3'  horizontalSize="1" tableId="d"></Table>
+                    <Table verticalSize='1'  horizontalSize="1" tableId="e"></Table>
+                    <Table verticalSize='1'  horizontalSize="1" tableId="f"></Table>
                 </Col>
                
             </Row>
