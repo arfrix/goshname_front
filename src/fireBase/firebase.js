@@ -22,7 +22,6 @@ class firebase{
         // app.analytics()
         this.auth = app.auth()
         this.db = app.firestore()
-        this.userInfo = app.auth().currentUser
     }
     
 
@@ -35,10 +34,18 @@ class firebase{
 
     }
 
-    addReservation(){
-       return this.db.collection('tables').doc('table_a').collection('chair_a_1').doc('morning').collection('cell_8_00').doc('eshvazDangahe').set({
-        dateExample: app.firestore.Timestamp.fromDate(new Date("December 10, 1815"))
-       })
+    addReservation(tableId , chairId , dayPart , cellTime){
+        if(this.auth.currentUser.displayName !== null){
+            return this.db.collection('tables').doc(tableId).collection(chairId).doc(dayPart).collection(cellTime).doc(this.auth.currentUser.displayName).set({
+             dateExample: app.firestore.Timestamp.fromDate(new Date("December 10, 1815"))
+            })
+
+        }else{
+            alert("reed")
+        }
+    //    return this.db.collection('tables').doc('table_a').collection('chair_a_1').doc('morning').collection('cell_8_00').doc('eshvazDangahe').set({
+    //     dateExample: app.firestore.Timestamp.fromDate(new Date("December 10, 1815"))
+    //    })
     }
 
 

@@ -65,7 +65,7 @@ function PickUpChairs(props){
         'isFree' : true ,
         'idReserved' : false
     }))
-    console.log("pi")
+    // console.log("pi")
     return(
         ChairList.map((val , index)=> 
             // ! why do we need key ?

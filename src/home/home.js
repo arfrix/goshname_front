@@ -5,14 +5,12 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import firebase from '../fireBase/firebase'
 
-import app from 'firebase/app'
-import 'firebase/auth'
 
 function Home (){
 
 
     useEffect(()=>{
-        console.log(firebase.auth.currentUser)
+        // console.log(firebase.auth.currentUser.displayName)
     }, [])
 
 
