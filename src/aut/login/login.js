@@ -2,10 +2,12 @@ import React, { useEffect } from 'react'
 import { useHistory } from "react-router-dom";
 import Button from 'react-bootstrap/Button'
 import firebase from '../../fireBase/firebase'
+import {UsetContext, UserContext} from '../userContext/userContext'
 
 
 
 function Login (){
+  const {setUserAuthData} = useContext(UserContext)
     let history = useHistory()
     
     useEffect(()=>{
@@ -14,13 +16,14 @@ function Login (){
         firebase.auth.getRedirectResult().then((result) => {
             if (result.credential) {
               // This gives you a Google Access Token. You can use it to access the Google API.
-              var token = result.credential.accessToken;
+              const token = result.credential.accessToken;
               
             }
             // The signed-in user info.
-            var user = result.user;
+            const user = result.user;
     
             if(result.user){
+                setUserAuthData(user)
                 history.push('/home')
             }
             

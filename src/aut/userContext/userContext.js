@@ -6,16 +6,16 @@ export const UserContext = createContext()
 
 function UserContextProvider(props){
 
-    const [userAutData , setUserAutData] = useState()
+    const [userAuthData , setUserAuthData] = useState()
     const [userReservation , setUserReservation] = useState()
 
     return(
         <UserContext.Provider value=
-            {userAutData ,
-            setUserAutData ,   
+            {{userAuthData ,
+            setUserAuthData ,   
             userReservation ,
             setUserReservation
-            }>
+            }}>
 
             {props.children}
 
