@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react'
+import React, { useContext , useEffect } from 'react'
 import { useHistory } from "react-router-dom";
 import Button from 'react-bootstrap/Button'
 import firebase from '../../fireBase/firebase'
-import {UsetContext, UserContext} from '../userContext/userContext'
+import {UserContext} from '../userContext/userContext'
 
 
 
