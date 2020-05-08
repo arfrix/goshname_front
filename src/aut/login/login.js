@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useHistory } from "react-router-dom";
 import Button from 'react-bootstrap/Button'
-import firebase from '../fireBase/firebase'
+import firebase from '../../fireBase/firebase'
 
 
 
