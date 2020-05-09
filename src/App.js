@@ -12,18 +12,17 @@ function App() {
   return (
     <BrowserRouter>
        
-      <div className="App">
-        <UserContextProvider>
-          
-        </UserContextProvider>
+      <div className="App"></div>
 
-      </div>
+      <UserContextProvider>
+        <Switch >
+          {/* //tip to use Context for just specific route you can use /prrrrro_router/routerWithContext.js istead of <Router/> */}
+          <Route exact  path="/" component={Splash}/>
+          <Route exact  path="/home" component={Home}/>       
+          <Route exact  path="/login" component={Login}/>       
+        </Switch>
+      </UserContextProvider>
 
-      <Switch >
-        <Route exact  path="/" component={Splash}/>
-        <Route exact  path="/home" component={Home}/>       
-        <Route exact  path="/login" component={Login}/>       
-      </Switch>
     </BrowserRouter>
   );
 }

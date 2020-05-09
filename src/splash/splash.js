@@ -13,7 +13,7 @@ function Splash(){
     let history = useHistory()
 
     useEffect(()=>{
-        console.log(setUserAuthData)
+        
         firebase.auth.onAuthStateChanged(function(user) {
             if (user) {
               console.log("signed in")
