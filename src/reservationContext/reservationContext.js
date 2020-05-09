@@ -1,23 +1,28 @@
 import React, { createContext, useReducer } from 'react'
-import reservationReducer from './reservationReducer'
+import {reservationReducer} from './reservationReducer'
 
 
-export reservationContext = createContext()
+export const reservationContext = createContext()
 
 
-function reservationContextProvider(props){
+function ReservationContextProvider(props){
 
     const [reservation , dispatch] = useReducer(reservationReducer , {
         tableId : null ,
         chairId : null ,
         dayPart : null ,
-
+        cell : null
     })
 
 
     return(
-        <reservationContext.Provider value={reservation , dispatch}>
+        <reservationContext.Provider value={{reservation , dispatch}}>
             {props.children}
         </reservationContext.Provider>
     )
 }
+
+
+
+
+export default ReservationContextProvider

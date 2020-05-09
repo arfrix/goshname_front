@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import TimeModal from '../../../timeReservation/timeModal'
+import {reservationContext} from '../../../reservationContext/reservationContext'
 import './chair.css'
 
 
@@ -35,9 +36,26 @@ function Chair(props){
 
     const [showModal, setShowModal] = useState(false);
 
+
+    const { dispatch} = useContext(reservationContext)
+    function chairOnClick(props){
+        dispatch({
+            type : 'ADD_TABLE_ID' ,
+            payload : props.tableId
+        })
+        dispatch({
+            type : 'ADD_CHAIR_ID' ,
+            payload : props.chairId
+        })
+        
+        
+        
+        setShowModal(props.isShowModal)
+    }
+
     return(
         <>
-            <div  className="fit-content-width mx-auto my-2"  onClick={() => setShowModal(true)}>        
+            <div  className="fit-content-width mx-auto my-2"  onClick={() => chairOnClick({isShowModal:true , tableId: props.tableId, chairId:`chair_${props.tableId}_${props.chairLineSituation}_${props.index}`})}>             
                 <img src={imgPath} className={direction}></img>
             </div>
         
@@ -75,6 +93,9 @@ function chairSituationToImgPath(ifFree , idReserved){
             return  'assets/img/used_chair.png'  
     
 }
+
+
+
 
 
 export default Chair;

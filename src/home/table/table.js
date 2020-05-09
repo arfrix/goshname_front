@@ -1,13 +1,16 @@
-import React, { useRef, useEffect, useState } from 'react'
+import React, { useRef, useEffect, useState, useContext } from 'react'
 import Chair from './chair/chair'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import './table.css'
 
+import {reservationContext} from '../../reservationContext/reservationContext'
+
 
 function Table (props){
 
+    const { dispatch } = useContext(reservationContext)
 
     const [tableHeight , setTableHeight] = useState()
     const tRef  = useRef()
@@ -20,6 +23,8 @@ function Table (props){
         setTableHeight(refCurrent.clientHeight)
         
     }, [])
+
+
 
     return(
 

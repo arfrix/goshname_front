@@ -20,6 +20,11 @@ export function reservationReducer(state , action){
                 ...state ,
                 dayPart : action.payload
             }
+        case 'ADD_CELL':
+            return{
+                ...state ,
+                cell : action.payload
+            }
             
     
         default: 
