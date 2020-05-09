@@ -53,7 +53,6 @@ function Cell(props){
     return(
       <>
         <Button variant={btnVariant} className="m-2" onClick={() => cellOnClick(props)}>{props.startTime}</Button>
-        <Button variant={btnVariant} className="m-2" onClick={() => setShowModal(true)}>{props.startTime}</Button>
         {`   `}
         <FinalAcceptModal
             show={showModal}

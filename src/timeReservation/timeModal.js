@@ -111,9 +111,9 @@ function TimeModal(props) {
 
     function TimeCellsPicker(){
         return(
-            timeCellInfo.map((val)=>
+            timeCellInfo.map((val , index)=>
                 {if(val.onWitchPartOfDay === witchTabCurrentySelected)
-                   return <Cell {...val}></Cell>}
+                   return <Cell key={index} {...val}></Cell>}
             )
         )
 
